@@ -13,7 +13,10 @@
       (asserts! (is-eq owner tx-sender) (err UNAUTHORIZED)) 
       (asserts! (< stx-statement u333) (err STATEMENT_TOO_LONG)) 
       (asserts! (> stx-statement u1) (err STATEMENT_TOO_SHORT))) 
-      (try! (print (string-utf8 u333))))
+      (try! (print (string-utf8 u333)))
+      (ok true))
+      
+      
     
 (print stx-statement (string-utf8 333))
 
