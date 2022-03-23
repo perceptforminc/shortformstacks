@@ -1,0 +1,9 @@
+;; Short Form Stacks Statements (NFT Possible)
+
+;; We are exploring the option of having the Statements placed on the blockchain be minted as NFTs. 
+;; In theory, Statements can be printed, minted and transferred.      
+
+(define-trait short-form-stx-statement
+    (
+      (transfer? (uint principal principal) (response bool uint))
+     (mint (uint principal) (response bool uint))))
