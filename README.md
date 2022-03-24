@@ -20,11 +20,14 @@ It was inspired by the Stacks Genesis Block.
 
 If a front end was developed for Short Form Stacks, all a user would need is a Hiro or XVerse wallet and STX in your wallet, which could be purchased from an exchange like OKCoin. 
 
+Lastly, there has thought to make the "Statements" be printable therefore viewable on via the explorer as well as making the Statements NFTs. 
+
 
 (Fun Fact: Internally, "Short Form Stacks" is also known as "Statements on Stacks".)
 
 
 Thank you Stacks for the opportunity to submit for the Clarity Cohort 2 Hackathon! 
 
+This is the first of many Clarity smart contracts to come. 
 
 (define-wagmi Stacks)
