@@ -24,7 +24,7 @@
 
 (define-map statement-by-principal { owner: principal } { ids: (list 1000 uint) })
 
-(define-map write { stx-statement-id: uint } { printed-statement: uint })
+(define-map write { stx-statement: uint } { printed-statement: uint })
 
 (define-map totals { every-statement: uint } { every-principal: uint })
 
