@@ -9,7 +9,7 @@ As a publicly-traded VC-backed company, I have doubts that the platform we all l
 We love it for the memes. The news. Trending topics. But one big reason why we love it is that the world can see our thoughts. What would happen if Twitter went on the blockchain as a public diary? 
 
 - Sign in with your Hiro or XVerse wallet. 
-- Write a thought.
+- Write a statement.
 - Pay a small fee to scribe it into history, as Stacks did with this Satoshi quote within the Genesis Block of Stacks.
 
 Imagine proposals on the Stacks blockchain. Yearbook comments. Final statements from people in hospice. People doing gender reveals through blockchain statements on Stacks. Instead of cards from Hallmark, people make their mark by creating short-form statements on the Stacks blockchain. 
