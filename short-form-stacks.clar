@@ -1,33 +1,34 @@
-;;Short Form Stacks, internally known as Statements on Stacks 
+;; Short Form Stacks aka Statements on Stacks 
 
-;;Data (Finetuning)
+;; Submission for the Clarity Camp Cohort 2 Hackathon 
+;; Inspired by the Stacks Genesis Block statement that was printed and is viewable on the explorer. 
+;; For reference, here is the Genesis contract address: SP000000000000000000002Q6VF78.genesis
 
-(define-map stx-statement (string-utf8 u333) u"Make your mark on the Stacks blockchain.")
-(define-map price uint u1000)
+;;Constants 
 
-  
-;;Public Functions (Finetuning)
-  
-  (define-public (stx-statement (stx-statement-id uint) (stx-statement-count uint))
-    (begin
-      (asserts! (is-eq owner tx-sender) (err UNAUTHORIZED)) 
-      (asserts! (< stx-statement u333) (err STATEMENT_TOO_LONG)) 
-      (asserts! (> stx-statement u1) (err STATEMENT_TOO_SHORT))) 
-      (try! (print (string-utf8 u333)))
-      (ok true))
-      
-      
+(define-constant ERR_STATEMENT_DID_NOT_POST u101)
+(define-constant ERR_NOT_SIGNED_IN u102)
+(define-constant ERR_STX_TRANSFER u103)
+
+(define-constant CONTRACT-OWNER tx-sender)
+
+;; Data
     
-(print stx-statement (string-utf8 333))
+(define-data-var stx-statement (string-utf8 333) u"Make your mark on the Stack blockchain.")
 
+(define-data-var price uint u1000)
 
-;;Read Only Functions (Assessing)
+(define-data-var statement-counter uint u0)
 
+(define-map statement-by-principal { owner: principal } { ids: (list 1000 uint) })
 
+(define-map write { stx-statement-id: uint } { printed-statement: uint })
 
-;;Constants (Finetuning)
+(define-map totals { every-statement: uint } { every-principal: uint })
 
-(define-constant USER_DID_NOT_PAY u1000)
-(define-constant USER_DID_NOT_POST uint)
-(define-constant USER_DID_NOT_SIGN_IN uint)
+;; Private 
+
+(define-read-only (get-stx-statement) (var-get stx-statement))
+
+;; Public 
 
