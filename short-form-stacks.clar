@@ -24,13 +24,20 @@
 
 (define-map statement-by-principal { owner: principal } { ids: (list 1000 uint) })
 
-(define-map write { stx-statement: uint } { printed-statement: uint })
+(define-data-var write-statement uint u333)
 
-(define-map totals { every-statement: uint } { every-principal: uint })
-
-;; Private 
+;; Read Only 
 
 (define-read-only (get-stx-statement) (var-get stx-statement))
 
-;; Public 
+;; Public
 
+(define-public (set-write-statement (print (string-utf8 333)))
+    (let ((new-statement (var-get stx-statement))
+          (cur-price (+ u1)))
+
+        (unwrap! (stx-transfer? cur-price tx-sender (as-contract tx-sender)) (err ERR_STX_TRANSFER))
+
+        (var-set price cur-price)
+
+        (ok cur-price)))
