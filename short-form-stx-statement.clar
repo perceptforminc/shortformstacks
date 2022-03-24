@@ -58,4 +58,3 @@
 		(ok short-form-stx-id)
 	)
 )
-
