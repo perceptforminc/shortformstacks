@@ -7,7 +7,9 @@
 ;;Constants 
 
 (define-constant ERR_STATEMENT_DID_NOT_POST u101)
+
 (define-constant ERR_NOT_SIGNED_IN u102)
+
 (define-constant ERR_STX_TRANSFER u103)
 
 (define-constant CONTRACT-OWNER tx-sender)
